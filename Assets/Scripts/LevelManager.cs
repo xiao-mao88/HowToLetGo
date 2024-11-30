@@ -14,7 +14,7 @@ public class LevelManager : MonoBehaviour
     void Start()
     {
         inkScript = GameObject.Find("NarrativeManager").GetComponent<InkScript>();
-        amountOfObjects = 2;
+        amountOfObjects = 14;
     }
 
     // Update is called once per frame
