@@ -5,6 +5,20 @@ TagManager:
   serializedVersion: 2
   tags:
   - CollectionObjects
+  - flower
+  - wedding
+  - notebook
+  - mainCharacterPic
+  - phone
+  - briefcase
+  - brokenMirror
+  - watch
+  - doll
+  - letter
+  - map
+  - art
+  - ring
+  - music
   layers:
   - Default
   - TransparentFX

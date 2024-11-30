@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Ink.Parsed;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -11,6 +13,10 @@ public class Player : MonoBehaviour
     [SerializeField] 
     [Tooltip("Insert Animator Controller")]
     private Animator playerAnimator;
+
+    private List<string> tags = 
+        new List<string> {"flower", "wedding", "notebook", "mainCharacterPic", "phone", "briefcase", "brokenMirror",
+            "watch", "doll", "letter", "ring", "map", "art", "music"};
     
     // Start is called before the first frame update
     void Start()
@@ -55,7 +61,8 @@ public class Player : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "CollectionObjects" && item == null)
+        string tag = collision.gameObject.tag;
+        if (tags.Contains(tag) && item == null)
         {
             item = collision.gameObject;
         }
