@@ -734,9 +734,6 @@
     <Reference Include="Unity.VisualScripting.Flow">
       <HintPath>/Users/laurenli/how_to_let_go/Library/ScriptAssemblies/Unity.VisualScripting.Flow.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.VisualScripting.Flow.Editor">
-      <HintPath>/Users/laurenli/how_to_let_go/Library/ScriptAssemblies/Unity.VisualScripting.Flow.Editor.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.InternalAPIEngineBridge.001">
       <HintPath>/Users/laurenli/how_to_let_go/Library/ScriptAssemblies/Unity.InternalAPIEngineBridge.001.dll</HintPath>
     </Reference>
@@ -751,6 +748,9 @@
     </Reference>
     <Reference Include="Unity.2D.Tilemap.Extras.Editor">
       <HintPath>/Users/laurenli/how_to_let_go/Library/ScriptAssemblies/Unity.2D.Tilemap.Extras.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.VisualScripting.Flow.Editor">
+      <HintPath>/Users/laurenli/how_to_let_go/Library/ScriptAssemblies/Unity.VisualScripting.Flow.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
       <HintPath>/Users/laurenli/how_to_let_go/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
