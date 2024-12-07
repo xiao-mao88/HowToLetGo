@@ -10,6 +10,12 @@ public class LevelManager : MonoBehaviour
     
     private GUIManager guiManager;
     
+    private AudioSource audioSource;
+    
+    [SerializeField] private AudioClip clip_Collect;
+    [SerializeField] private AudioClip clip_AllCollect;
+    [SerializeField] private AudioClip clip_Revive;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -24,11 +30,13 @@ public class LevelManager : MonoBehaviour
 
     public void removeObject(GameObject item)
     {
+        audioSource.PlayOneShot(clip_Collect);
         inkScript.playDialogue(item.gameObject.tag);
         Destroy(item);
         amountOfObjects--;
         if (amountOfObjects == 0)
         {
+            audioSource.PlayOneShot(clip_AllCollect);
             endGame();
         }
     }

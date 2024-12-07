@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using Ink.Parsed;
 using Unity.VisualScripting;
 using UnityEngine;
-
+using Random = UnityEngine.Random;
 public class Player : MonoBehaviour
 {
     public float speed = 1.5f;
@@ -13,7 +13,8 @@ public class Player : MonoBehaviour
     [SerializeField] 
     [Tooltip("Insert Animator Controller")]
     private Animator playerAnimator;
-
+    [SerializeField] private AudioClip[] walkSounds;
+    private AudioSource playerAS1;
     private List<string> tags = 
         new List<string> {"flower", "wedding", "notebook", "mainCharacterPic", "phone", "briefcase", "brokenMirror",
             "watch", "doll", "letter", "ring", "map", "art", "music"};
@@ -59,6 +60,11 @@ public class Player : MonoBehaviour
         }
     }
 
+    public void footStep()
+    {
+        playerAS1.clip = walkSounds[Random.Range(0, walkSounds.Length)];
+        playerAS1.Play();
+    }
     private void OnCollisionEnter2D(Collision2D collision)
     {
         string tag = collision.gameObject.tag;

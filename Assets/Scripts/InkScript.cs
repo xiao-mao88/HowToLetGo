@@ -11,14 +11,17 @@ public class InkScript : MonoBehaviour
     private Story story;
     public bool showDialogue;
     public String currentDialogue;
-
+    private AudioSource soundSource;
     public bool ended = false;
+    [SerializeField] private AudioClip revivalClip;
     // Start is called before the first frame update
     void Start()
     { 
         story = new Story(inkJson.text);
+        story.BindExternalFunction("play_audio", (string clipName) => { PlayAudio(clipName); });
         showDialogue = true;
         currentDialogue = story.Continue();
+        
     }
 
     // Update is called once per frame
@@ -47,6 +50,11 @@ public class InkScript : MonoBehaviour
         }
     }
 
+    
+    void PlayAudio(string clipName)
+    {
+        soundSource.PlayOneShot(revivalClip);
+    }
     public void playDialogue(string tag)
     {
         switch (tag)

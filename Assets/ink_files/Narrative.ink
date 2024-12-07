@@ -1,3 +1,4 @@
+EXTERNAL play_audio(clipName)
 // Opening Dialog
 "I thought... maybe I could fix this."
 "They said it was impossible, but what if I could gather everything<br>that made you... you?"
@@ -77,6 +78,7 @@ You feel the weight of what you're about to do, but there's no<br>turning back n
 You’ve gathered everything. Every piece... <br>every memory, every dream, every regret."<br>"You brought them all back. 
 "Please... please come back." 
 ...
+~ play_audio("revival_sound")
 ......
 "Why isn’t it working? I did everything right! I just want you back!" 
 "...It’s over. You’re really gone." 
