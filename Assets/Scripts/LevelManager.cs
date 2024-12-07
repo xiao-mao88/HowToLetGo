@@ -21,6 +21,7 @@ public class LevelManager : MonoBehaviour
     {
         inkScript = GameObject.Find("NarrativeManager").GetComponent<InkScript>();
         amountOfObjects = 14;
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame

@@ -23,6 +23,7 @@ public class Player : MonoBehaviour
     void Start()
     {
         levelManager = GameObject.Find("LevelManager").GetComponent<LevelManager>();
+        playerAS1 = GetComponent<AudioSource>();
         playerAnimator.SetBool("isWalking", false);
     }
 

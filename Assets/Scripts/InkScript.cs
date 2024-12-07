@@ -17,6 +17,7 @@ public class InkScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     { 
+        soundSource = GetComponent<AudioSource>();
         story = new Story(inkJson.text);
         story.BindExternalFunction("play_audio", (string clipName) => { PlayAudio(clipName); });
         showDialogue = true;
