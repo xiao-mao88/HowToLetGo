@@ -25,6 +25,7 @@ public class Player : MonoBehaviour
         levelManager = GameObject.Find("LevelManager").GetComponent<LevelManager>();
         playerAS1 = GetComponent<AudioSource>();
         playerAnimator.SetBool("isWalking", false);
+        //playerAnimator.SetBool("isLeft", false);
     }
 
     // Update is called once per frame
@@ -33,25 +34,30 @@ public class Player : MonoBehaviour
         if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey("a")) {
             transform.position += Vector3.left * speed * Time.deltaTime;
             playerAnimator.SetBool("isWalking", true);
+            //playerAnimator.SetBool("isLeft", false);
         }
         else if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey("d"))
         {
             transform.position += Vector3.right * speed * Time.deltaTime;
             playerAnimator.SetBool("isWalking", true);
+            //playerAnimator.SetBool("isLeft", true);
         }
         else if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey("w"))
         {
             transform.position += Vector3.up * speed * Time.deltaTime;
             playerAnimator.SetBool("isWalking", true);
+            //playerAnimator.SetBool("isLeft", false);
         }
         else if (Input.GetKey(KeyCode.DownArrow) || Input.GetKey("s"))
         {
             transform.position += Vector3.down * speed * Time.deltaTime;
             playerAnimator.SetBool("isWalking", true);
+            //playerAnimator.SetBool("isLeft", false);
         }
         else
         {
             playerAnimator.SetBool("isWalking", false);
+            //playerAnimator.SetBool("isLeft", false);
         }
         
         Rigidbody rigidbody = GetComponent<Rigidbody>();
